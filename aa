@@ -1,0 +1,23 @@
+$data = array(
+	0 => array(
+		'image' => array(
+			'url' => '1.jpg'
+		)
+	),
+	2 => array(
+		'image' => array(
+			'url' => '2.jpg'
+		)
+	),
+	3 => array(
+		'image' => array(
+			'url' => '3.jpg'
+		)
+	)
+);
+
+$result = array(
+	0 => '1.jpg',
+	1 => '2.jpg',
+	2 => '3.jpg'
+)
