@@ -1,8 +1,7 @@
 <?php
-include "CrudAble.php";
-use CrudAble\CrudAble As CrudAble;
 
-class Library implements CrudAble {
+
+class Library {
 
 public function __construct(){
 	$this->db = new PDO('mysql:host=localhost;dbname=library','root','');
@@ -56,23 +55,4 @@ public function delete($id){
 }
 }
 
-$library = new Library();
-$table = $library->read(null);
-foreach($table as $row){
-    echo "<li>{$row['judulBuku']}</li>";
-}
-
-$edit = $library->read(123);
-echo $edit['judulBuku'];
-
-$data = array(
-		'judulBuku' => 'Titanics',
-		'pengarang' => 'Tegar',
-		'penerbit' => 'PT.CIpta'
-
-	);
-// $insert = $library->create($data);
-// var_dump($insert);
-$update = $library->update(145, $data);
-var_dump($update);
 ?>
